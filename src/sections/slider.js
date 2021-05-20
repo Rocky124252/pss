@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Page } from '../components/common';
 import { Config } from '../config/config';
 import { HomeSupport } from '../components';
 
@@ -65,30 +64,28 @@ const BannerTextWrap = styled.div`
     }
 `;
  
-export const HomeSlider = () => (
-    <Page>
-        <HeaderImage>
-            <img src="/assets/images/banner.jpg" alt="Header Banner" />
-            <BannerTextDiv><BannerTextWrap>
-                <h2>{Config["home"]["tab_block_title"]}</h2>
-                <p>{Config["home"]["tab_block_subtitle"]}</p>
-                <div className="shop_btn">
-                    <a href="#this" title="Shop Now">Shop Now</a>
-                </div>
-            </BannerTextWrap></BannerTextDiv>
-        </HeaderImage>
-        <SupportWrap>
-            <HomeSupport img={Config["home"]["support_img1"]} alt=""
-                btntxt={Config["home"]["support_btn1"]}
-                btnlink={Config["home"]["support_btnlink1"]}>{Config["home"]["support_text1"]}</HomeSupport>
+export const HomeSlider = () => (<>
+    <HeaderImage>
+        <img src="/assets/images/banner.jpg" alt="Header Banner" />
+        <BannerTextDiv><BannerTextWrap>
+            <h2>{Config["home"]["tab_block_title"]}</h2>
+            <p>{Config["home"]["tab_block_subtitle"]}</p>
+            <div className="shop_btn">
+                <a href="#this" title="Shop Now">Shop Now</a>
+            </div>
+        </BannerTextWrap></BannerTextDiv>
+    </HeaderImage>
+    <SupportWrap>
+        <HomeSupport img={Config["home"]["support_img1"]} alt=""
+            btntxt={Config["home"]["support_btn1"]}
+            btnlink={Config["home"]["support_btnlink1"]}>{Config["home"]["support_text1"]}</HomeSupport>
 
-            <HomeSupport img={Config["home"]["support_img2"]} alt=""
-                btntxt={Config["home"]["support_btn2"]}
-                btnlink={Config["home"]["support_btnlink2"]}>{Config["home"]["support_text2"]}</HomeSupport>
+        <HomeSupport img={Config["home"]["support_img2"]} alt=""
+            btntxt={Config["home"]["support_btn2"]}
+            btnlink={Config["home"]["support_btnlink2"]}>{Config["home"]["support_text2"]}</HomeSupport>
 
-            <HomeSupport img={Config["home"]["support_img3"]} alt=""
-                btntxt={Config["home"]["support_btn3"]}
-                btnlink={Config["home"]["support_btnlink3"]}>{Config["home"]["support_text3"]}</HomeSupport>
-        </SupportWrap>
-    </Page>
-);
+        <HomeSupport img={Config["home"]["support_img3"]} alt=""
+            btntxt={Config["home"]["support_btn3"]}
+            btnlink={Config["home"]["support_btnlink3"]}>{Config["home"]["support_text3"]}</HomeSupport>
+    </SupportWrap>
+</>);

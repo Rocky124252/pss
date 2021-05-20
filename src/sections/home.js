@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Page } from '../components';
 import { Config } from '../config/config';
 import { PickBlock } from '../components';
 
@@ -95,17 +94,14 @@ export const Update = () => (
 );
 
 export const PageTitle = () => (
-  <Page>
-    <TitleSection>
-      <TitleDiv>
-        <h2>{Config["home"]["page_title"]}</h2>
-      </TitleDiv>
-    </TitleSection>
-  </Page>
+  <TitleSection>
+    <TitleDiv>
+      <h2>{Config["home"]["page_title"]}</h2>
+    </TitleDiv>
+  </TitleSection>
 );
 
-export const HomeArticles = () => (
-  <Page>
+export const HomeArticles = () => (<>
     <BlockSection>
       <PickBlock title={Config["home"]["article1_title"]}
         img={Config["home"]["article1_img"]}
@@ -119,5 +115,4 @@ export const HomeArticles = () => (
         img={Config["home"]["article3_img"]}
         type={true}>{Config["home"]["article3_desc"]}</PickBlock>
     </BlockSection>
-  </Page>
-);
+</>);

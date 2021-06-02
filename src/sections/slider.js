@@ -6,10 +6,19 @@ import { HomeSupport } from '../components';
 const HeaderImage = styled.div`
 	width: 100%;
     position: relative;
+    overflow: hidden;
     img {
         width: 100%;
         height: auto;
     }
+
+    @media only screen and (max-width: 800px) {
+        img {
+            width: auto;
+            height: 340px;
+            margin-left: -100px;
+        }
+	}
 `;
 
 const SupportWrap = styled.div`
@@ -61,6 +70,12 @@ const SearchWrap = styled.div`
         margin-top: 20px;
         width: 100%;
     }
+
+    @media only screen and (max-width: 500px) {
+        .search--txt {
+            min-width: 300px;
+        }
+    }
 `;
 
 const BannerTextDiv = styled.div`
@@ -93,6 +108,23 @@ const BannerTextDiv = styled.div`
         font-weight: bold;
         margin-bottom: 1rem;
     }
+
+    @media only screen and (max-width: 800px) {
+        width: 70%;
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.8rem;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        width: 80%;
+        h2 {
+            font-size: 1.6rem;
+        }
+    }
 `;
 
 const BannerTextWrap = styled.div`
@@ -106,6 +138,12 @@ const BannerTextWrap = styled.div`
             border: 1px solid #343367;
             border-radius: 3px; 
         }
+    }
+    @media only screen and (max-width: 800px) {
+        padding: 18px 25px;
+    }
+    @media only screen and (max-width: 500px) {
+        padding: 10px 0 10px 10px;
     }
 `;
  

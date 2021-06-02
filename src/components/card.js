@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Card = styled.div`
-	padding: 20px;
+	padding: 13px 20px;
 	display: inline-block;
 	text-align: center;
-	width: 250px;
+	width: 200px;
 	border-right: 1px solid #CCC;
 	margin: 10px;
 	&:last-child {
@@ -24,7 +24,7 @@ const Card = styled.div`
 	}
 	@media only screen and (max-width: 800px) {
 		display: block;
-		width: 100%;
+		width: auto;
 		border-right: none;
 	}
 `;
@@ -36,7 +36,7 @@ const PrimaryBtn = styled.a`
 	border: 1px solid black;
 	color: black;
 	padding: 5px;
-	width: 200px;
+	width: 180px;
 	text-decoration: none;
 	display: inline-block;
 	transition: all 0.3s ease-in-out;

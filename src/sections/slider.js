@@ -16,6 +16,51 @@ const SupportWrap = styled.div`
     width: 100%;
     background: #EEEEEE;
     text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+`;
+
+const HomeSuportWrap = styled.div`
+    text-align: center;
+
+    @media only screen and (max-width: 1280px) {
+		width: 100%;
+        margin-top: 20px;
+	}
+`;
+
+const SearchWrap = styled.div`
+    width: 35%;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    h4 {
+        color: #2d2a5f;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    .search--txt {
+        min-width: 350px;
+        padding: 10px 45px 10px 20px;
+        text-align: center;
+        border: 1px solid #CCC;
+        color: #333;
+        font-size: 1rem;
+        border-radius: 2px;
+        &:before {
+            content: "\f002";
+        }
+        &:focus, &:active {
+            border: 1px solid #CCC;
+            outline: unset;
+        }
+    }
+    @media only screen and (max-width: 1280px) {
+        margin-top: 20px;
+        width: 100%;
+    }
 `;
 
 const BannerTextDiv = styled.div`
@@ -76,16 +121,22 @@ export const HomeSlider = () => (<>
         </BannerTextWrap></BannerTextDiv>
     </HeaderImage>
     <SupportWrap>
-        <HomeSupport img={Config["home"]["support_img1"]} alt=""
-            btntxt={Config["home"]["support_btn1"]}
-            btnlink={Config["home"]["support_btnlink1"]}>{Config["home"]["support_text1"]}</HomeSupport>
+        <SearchWrap>
+            <h4>Search or Track Packages</h4>
+            <input type="text" id="search" className="search--txt" placeholder="Enter Tracking Number(s)" />
+        </SearchWrap>
+        <HomeSuportWrap>
+            <HomeSupport img={Config["home"]["support_img1"]} alt=""
+                btntxt={Config["home"]["support_btn1"]}
+                btnlink={Config["home"]["support_btnlink1"]}>{Config["home"]["support_text1"]}</HomeSupport>
 
-        <HomeSupport img={Config["home"]["support_img2"]} alt=""
-            btntxt={Config["home"]["support_btn2"]}
-            btnlink={Config["home"]["support_btnlink2"]}>{Config["home"]["support_text2"]}</HomeSupport>
+            <HomeSupport img={Config["home"]["support_img2"]} alt=""
+                btntxt={Config["home"]["support_btn2"]}
+                btnlink={Config["home"]["support_btnlink2"]}>{Config["home"]["support_text2"]}</HomeSupport>
 
-        <HomeSupport img={Config["home"]["support_img3"]} alt=""
-            btntxt={Config["home"]["support_btn3"]}
-            btnlink={Config["home"]["support_btnlink3"]}>{Config["home"]["support_text3"]}</HomeSupport>
+            <HomeSupport img={Config["home"]["support_img3"]} alt=""
+                btntxt={Config["home"]["support_btn3"]}
+                btnlink={Config["home"]["support_btnlink3"]}>{Config["home"]["support_text3"]}</HomeSupport>
+        </HomeSuportWrap>
     </SupportWrap>
 </>);

@@ -36,6 +36,9 @@ const StyledUl = styled.ul`
 const StyledLi = styled.li`
   display: inline-block;
   font-size: 14px;
+  &.desktop--hide {
+    display: none;
+  }
   a {
     display: inline-block;
     padding: 10px;
@@ -65,9 +68,12 @@ const StyledLi = styled.li`
     display: block;
     width: 100%;
     text-align: left;
+    &.desktop--hide {
+      display: block;
+    }
     a {
       display: block;
-      color: ${COLORS.White};
+      color: #333;
       width: 100%;
       margin: 0;
       font-size: 16px;
@@ -83,11 +89,10 @@ const MobileMenuSpan = styled.label`
   margin: auto;
   color: ${COLORS.White};
   border-bottom: 0.1px solid ${COLORS.White};
-  width: unset;
+  width: 27px;
   cursor: pointer;
   padding-top: 18px;
   top: 4px;
-  float: right;
   position: relative;
 
   span {
@@ -196,15 +201,6 @@ const DropDownLi = styled(StyledLi)`
 
 export const NavBar = () => {
     return (
-      <>
-      <input type="checkbox" id="mobile_status" />
-      <MobileMenuSpan htmlFor="mobile_status">
-        <span></span>
-        <span></span>
-        <span></span>
-      </MobileMenuSpan>
-
-
       <NavWrapDiv>
         <HelloP>
           <StyledUl>
@@ -221,6 +217,12 @@ export const NavBar = () => {
           </StyledUl>          
         </HelloP>
 
+        <input type="checkbox" id="mobile_status" />
+        <MobileMenuSpan htmlFor="mobile_status">
+          <span></span>
+          <span></span>
+          <span></span>
+        </MobileMenuSpan>
         <StyledUl id="mobile_menu">
           <StyledLi>
             <Link to="/">Home</Link>
@@ -240,8 +242,13 @@ export const NavBar = () => {
           <StyledLi>
             <Link to="/updates">Updates</Link>
           </StyledLi>
+          <StyledLi className="desktop--hide">
+            <Link to="/account">My Account</Link>
+          </StyledLi>
+          <StyledLi className="desktop--hide">
+            <Link to="/logout">Log Out</Link>
+          </StyledLi>
         </StyledUl>
       </NavWrapDiv>
-    </>
 	);
 }

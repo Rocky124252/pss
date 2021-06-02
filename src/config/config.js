@@ -40,16 +40,13 @@ export const Config = {
 
         "flower_img": "/assets/images/flower.jpg",
      },
-     "about": {
-         
+     "about": {         
      },
      "contact": {
-         "contact_page_title": "CONTACT INFORMATION",
-         "contact_block_title": "We'd love to hear from you!",
-         "contact_block_subtitle": "Contact us by Phone, Online or by Mail.",
-
-         "contact_phone_number": "111-111-1111",
-         "contact_fax_number": "121-121-1212",
+         "contact_page_title": "Contact Us",
+         "contact_page_banner": "/assets/images/contact_banner.png",
+         "contact_page_desc": "You can choose two ways to contact us. Through email or by phone. If you choose phone then you will be asked one question then you will be directed transferred to a real person. If you choose email then we will try to contact you back as soon as we can. ",
+         "call_us_content": "Please call us at (941)-718-5370. You will have to answer one question then you will be transferred right away.",
      }
  };
 

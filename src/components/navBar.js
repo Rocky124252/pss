@@ -162,7 +162,7 @@ const DropDownContent = styled.div`
 `;
 
 const DropDownLi = styled(StyledLi)`
-  display: block;
+  display: inline-block;
   font-size: 1rem;
   &:hover {
 	  transition: all 1s ease-in-out;

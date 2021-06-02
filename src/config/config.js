@@ -6,6 +6,7 @@ export const Config = {
         "tab_block_subtitle": "Order the shipping supplies you need to send holiday cheer from home. We have boxes, bubble wrap, and more for a low price.",
 
         "page_title": "What makes PSS unique?",
+        "page_title_bg": "/assets/images/title.jpg",
 
         "article1_title": "100% online shipping business",
         "article1_desc": "PSS is a 100% online shipping business. With our website, you can request a package to be picked up at any time and anywhere with no additional fees. Our goal is to make your life easier.",

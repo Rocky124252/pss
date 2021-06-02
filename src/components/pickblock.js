@@ -8,6 +8,9 @@ const PickDiv = styled.div`
 	flex-direction: row;
 	margin-top: 40px;
 	background: ${COLORS.White};
+	@media only screen and (max-width: 880px) {
+		display: block;
+	}
 `;
 
 const PickLeft = styled.div`
@@ -74,6 +77,26 @@ const PickLeft = styled.div`
 			background: #548eeb;
 		}
 	}
+
+	@media only screen and (max-width: 880px) {
+		width: 100%;
+		margin-bottom: 20px;
+		.pick_title { 
+			width: 80%;
+			font-size: 1.4rem;
+			height: 90px;
+			&:after {
+				right: -30px;
+				border-top: 90px solid #2052a4; 
+				border-right: 30px solid transparent; 
+			}
+			&:before {
+				left: -30px;
+				border-bottom: 90px solid #2052a4; 
+				border-left: 30px solid transparent; 
+			}
+		}
+	}
 `;
 const PickRight = styled.div`
 	width: 55%;
@@ -82,6 +105,14 @@ const PickRight = styled.div`
 	}
 	&.align-right {
 		text-align: right;
+	}
+
+	@media only screen and (max-width: 880px) {
+		width: 100%;
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 `;
 

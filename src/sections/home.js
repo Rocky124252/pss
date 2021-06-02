@@ -56,12 +56,20 @@ const TitleSection = styled.section`
 `;
 const TitleDiv = styled.div`
   text-align: center;
-  min-height: 188px;
-  background: url('/assets/images/title.jpg') no-repeat center top;
+  position: relative;
+  display: flex;
+  justify-content: center;
   h2 {
     padding-top: 94px;
     font-size: 2.5rem;
     color: white;
+    position: relative;
+    z-index: 20;
+  }
+  img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
   }
 `;
 
@@ -96,7 +104,7 @@ export const Update = () => (
 export const PageTitle = () => (
   <TitleSection>
     <TitleDiv>
-      <h2>{Config["home"]["page_title"]}</h2>
+      <img src={Config["home"]["page_title_bg"]} alt="" />
     </TitleDiv>
   </TitleSection>
 );

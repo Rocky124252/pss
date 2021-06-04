@@ -73,7 +73,10 @@ const SearchWrap = styled.div`
 
     @media only screen and (max-width: 500px) {
         .search--txt {
-            min-width: 300px;
+            min-width: 270px;
+        }
+        h4 {
+            font-size: 1.4rem;
         }
     }
 `;

@@ -3,7 +3,7 @@ export const Config = {
         "website_name": "PSS",
         "logo_image_path": "/assets/images/logo.jpg",
         "tab_block_title": "Need Supplies?",
-        "tab_block_subtitle": "Order the shipping supplies you need to send holiday cheer from home. We have boxes, bubble wrap, and more for a low price.",
+        "tab_block_subtitle": "Keep the need supplies title but make the description say that we will provide the supplies needed for you to ship your item safely.",
 
         "page_title": "What makes PSS unique?",
         "page_title_bg": "/assets/images/title.jpg",

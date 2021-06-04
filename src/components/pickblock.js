@@ -96,6 +96,10 @@ const PickLeft = styled.div`
 				border-left: 30px solid transparent; 
 			}
 		}
+		.right_move {
+			right: unset;
+			left: 30px;
+		}
 	}
 `;
 const PickRight = styled.div`

@@ -84,7 +84,7 @@ const SearchWrap = styled.div`
 const BannerTextDiv = styled.div`
     position: absolute;
     width: 48%;
-    height: 250px;
+    height: 240px;
     background: #11479f;
     left: 0;
     top: 40px;
@@ -95,7 +95,7 @@ const BannerTextDiv = styled.div`
         top: 0;
         width: 0;
         height: 0;
-        border-top: 250px solid #11479f; 
+        border-top: 240px solid #11479f; 
         border-right: 60px solid transparent; 
     }
     h2 {
@@ -118,14 +118,21 @@ const BannerTextDiv = styled.div`
             font-size: 2rem;
         }
         p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             line-height: 1.8rem;
         }
     }
     @media only screen and (max-width: 500px) {
         width: 80%;
+        height: 220px;
         h2 {
             font-size: 1.6rem;
+            margin-top: 15px;
+        }
+        &:after {
+            right: -40px;
+            border-top: 220px solid #11479f; 
+            border-right: 40px solid transparent; 
         }
     }
 `;
@@ -156,9 +163,9 @@ export const HomeSlider = () => (<>
         <BannerTextDiv><BannerTextWrap>
             <h2>{Config["home"]["tab_block_title"]}</h2>
             <p>{Config["home"]["tab_block_subtitle"]}</p>
-            <div className="shop_btn">
+            {/* <div className="shop_btn">
                 <a href="#this" title="Shop Now">Shop Now</a>
-            </div>
+            </div> */}
         </BannerTextWrap></BannerTextDiv>
     </HeaderImage>
     <SupportWrap>

@@ -40,7 +40,11 @@ export const Config = {
 
         "flower_img": "/assets/images/flower.jpg",
      },
-     "about": {         
+     "profile": {
+         "personal_img": "/assets/images/ico_personal.png",
+         "gift_img": "/assets/images/ico_gift.png",
+         "shipping_img": "/assets/images/ico_shipping.png",
+         "payment_img": "/assets/images/ico_payment.png",
      },
      "contact": {
          "contact_page_title": "Contact Us",

@@ -1,6 +1,7 @@
 import { 
   HomePage,
-  ContactPage
+  ContactPage,
+  ProfilePage,
 } from './pages';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
@@ -11,6 +12,7 @@ function App() {
           {/*<Route component={NavigationBar} />*/}
           <Route exact path='/' component={HomePage} />
           <Route exact path='/contact' component={ContactPage} />
+          <Route exact path='/profile' component={ProfilePage} />
           
         </Switch>
       </Router>

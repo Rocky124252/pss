@@ -40,7 +40,7 @@ export const Config = {
 
         "flower_img": "/assets/images/flower.jpg",
      },
-     "profile": {
+     "profile":{
          "personal_img": "/assets/images/ico_personal.png",
          "gift_img": "/assets/images/ico_gift.png",
          "shipping_img": "/assets/images/ico_shipping.png",

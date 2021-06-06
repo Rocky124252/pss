@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Config } from '../config/config';
 import { Page } from '../components/common';
@@ -21,19 +21,88 @@ const ConfigItem = styled.div`
 	border: 1px solid #CCC;
 	border-radius: 10px; 
 	background: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	cursor: pointer;
+	&:hover, &.selected {
+		opacity: 0.8;
+		transition: all 0.3s ease-in-out;
+	}
+	img {
+		border-radius: 50%;
+	}
+	h3 {
+		margin-left: 10px;
+		margin-bottom: 5px;
+	}
+	p {
+		font-size: 12px;
+		margin-left: 10px;
+	}
+`;
+
+const ConfigContent = styled.div`
+	width: 100%;
+	margin-top: 20px;
+	h2 {
+		color: #333;
+		font-size: 2rem;
+	}
+	p {
+		color: #333;
+		font-size: 1rem;
+		margin-bottom: 1rem;
+		padding-top: 5px;
+		padding-bottom: 1rem;
+	}
 `;
 
 export const ProfileHeader = () => {
-	return (
+	const [curPage, setCurPage] = useState(1);
+	return (<>
 		<ConfigWrap>
 			<Page>
-				<ConfigItem>
+				<ConfigItem onClick={() => setCurPage(1)} className={curPage === 1?'selected':''}>
 					<img src={Config["profile"]["personal_img"]} alt="" />
+					<div>
+						<h3>Account Info</h3>
+						<p>View and edit your personal info below.</p>
+					</div>
 				</ConfigItem>
-				<ConfigItem>2</ConfigItem>
-				<ConfigItem>3</ConfigItem>
-				<ConfigItem>4</ConfigItem>
+				<ConfigItem onClick={() => setCurPage(2)} className={curPage === 2?'selected':''}>
+					<img src={Config["profile"]["gift_img"]} alt="" />
+					<div>
+						<h3>Gift Cards</h3>
+						<p>View and edit your gift cards below.</p>
+					</div>
+				</ConfigItem>
+				<ConfigItem onClick={() => setCurPage(3)} className={curPage === 3?'selected':''}>
+					<img src={Config["profile"]["shipping_img"]} alt="" />
+					<div>
+						<h3>Gift Cards</h3>
+						<p>View and edit your gift cards below.</p>
+					</div>
+				</ConfigItem>
+				<ConfigItem onClick={() => setCurPage(4)} className={curPage === 4?'selected':''}>
+					<img src={Config["profile"]["payment_img"]} alt="" />
+					<div>
+						<h3>Payment Method</h3>
+						<p>View and edit your payment method below.</p>
+					</div>
+				</ConfigItem>
 			</Page>
 		</ConfigWrap>
-	);
+		<Page>
+			{curPage === 1 ? <ConfigContent>
+				<h2>Account Info</h2>
+				<p>View and edit your personal info below.</p>
+				<hr />
+			</ConfigContent> : null}
+			{curPage === 2 ? <ConfigContent>2</ConfigContent> : null}
+			{curPage === 3 ? <ConfigContent>3</ConfigContent> : null}
+			{curPage === 4 ? <ConfigContent>4</ConfigContent> : null}
+		</Page>
+	</>);
 }

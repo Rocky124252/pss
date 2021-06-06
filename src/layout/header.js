@@ -24,7 +24,7 @@ export const Header = () => {
 		<HeaderStyle>
 			<Page>
 				<a href="/" title={Config["home"]["website_name"]} className="logo">
-					<img src={Config["home"]["logo_image_path"]} alt={Config["about"]["website_name"]} />
+					<img src={Config["home"]["logo_image_path"]} alt={Config["home"]["website_name"]} />
 				</a>
 				<NavBar />
 				<Clear />

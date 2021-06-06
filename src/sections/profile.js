@@ -63,7 +63,7 @@ const ConfigContent = styled.div`
 `;
 
 export const ProfileHeader = () => {
-	const [curPage, setCurPage] = useState(1);
+	const [curPage, setCurPage] = useState(0);
 	return (<>
 		<ConfigWrap>
 			<Page>

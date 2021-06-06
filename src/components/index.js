@@ -7,3 +7,4 @@ export * from './pickblock';
 export * from './pagetitle';
 export * from './articles';
 export * from './rightsidebar';
+export * from './personal';

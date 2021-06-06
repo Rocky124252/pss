@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Config } from '../config/config';
 import { Page } from '../components/common';
+import { PersonalInfo } from '../components';
 
 const ConfigWrap = styled.div`
 	width: 100%;
@@ -28,7 +29,7 @@ const ConfigItem = styled.div`
 	cursor: pointer;
 	&:hover, &.selected {
 		opacity: 0.8;
-		transition: all 0.3s ease-in-out;
+		transition: all 0.5s ease-in-out;
 	}
 	img {
 		border-radius: 50%;
@@ -99,11 +100,7 @@ export const ProfileHeader = () => {
 		</ConfigWrap>
 		<Page>
 			{curPage === 1 ? <ConfigContent>
-				<h2>Account Info</h2>
-				<p className="c-header">View and edit your personal info below.</p>
-				<hr /> <br />
-				<p><strong>Login Email:</strong></p>
-				<p>email@hotmail.com</p>
+				<PersonalInfo email={'email@hotmail.com'}/>
 			</ConfigContent> : null}
 			{curPage === 2 ? <ConfigContent>2</ConfigContent> : null}
 			{curPage === 3 ? <ConfigContent>3</ConfigContent> : null}

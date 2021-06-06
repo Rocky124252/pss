@@ -53,6 +53,9 @@ const ConfigContent = styled.div`
 	p {
 		color: #333;
 		font-size: 1rem;
+		padding-bottom: 6px;
+	}
+	.c-header {
 		margin-bottom: 1rem;
 		padding-top: 5px;
 		padding-bottom: 1rem;
@@ -81,8 +84,8 @@ export const ProfileHeader = () => {
 				<ConfigItem onClick={() => setCurPage(3)} className={curPage === 3?'selected':''}>
 					<img src={Config["profile"]["shipping_img"]} alt="" />
 					<div>
-						<h3>Gift Cards</h3>
-						<p>View and edit your gift cards below.</p>
+						<h3>Current Shipments</h3>
+						<p>View and edit your current shipments below.</p>
 					</div>
 				</ConfigItem>
 				<ConfigItem onClick={() => setCurPage(4)} className={curPage === 4?'selected':''}>
@@ -97,8 +100,10 @@ export const ProfileHeader = () => {
 		<Page>
 			{curPage === 1 ? <ConfigContent>
 				<h2>Account Info</h2>
-				<p>View and edit your personal info below.</p>
-				<hr />
+				<p className="c-header">View and edit your personal info below.</p>
+				<hr /> <br />
+				<p><strong>Login Email:</strong></p>
+				<p>email@hotmail.com</p>
 			</ConfigContent> : null}
 			{curPage === 2 ? <ConfigContent>2</ConfigContent> : null}
 			{curPage === 3 ? <ConfigContent>3</ConfigContent> : null}

@@ -49,6 +49,10 @@ const ConfigContent = styled.div`
 	h2 {
 		color: #333;
 		font-size: 2rem;
+		span {
+			font-size: 1rem;
+			color: #555;
+		}
 	}
 	p {
 		color: #333;

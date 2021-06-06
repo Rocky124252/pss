@@ -13,6 +13,9 @@ const ConfigWrap = styled.div`
 		display: flex;
 		justify-content: space-between;
 	}
+	@media only screen and (max-width: 700px) {
+		margin-top: 10px;
+	}
 `;
 
 const ConfigItem = styled.div`
@@ -41,6 +44,19 @@ const ConfigItem = styled.div`
 		font-size: 12px;
 		margin-left: 10px;
 	}
+
+	@media only screen and (max-width: 700px) {
+		width: 20%;
+		border: none;
+		&>div {
+			display: none;
+		}
+		img {
+			width: 80%;
+			height: auto;
+			margin: 0 auto;
+		}
+	}
 `;
 
 const ConfigContent = styled.div`
@@ -63,6 +79,19 @@ const ConfigContent = styled.div`
 		margin-bottom: 1rem;
 		padding-top: 5px;
 		padding-bottom: 1rem;
+	}
+
+	@media only screen and (max-width: 700px) {
+		margin-top: 10px;
+		h2 {
+			color: #333;
+			font-size: 1.8rem;
+			span {
+				font-size: 0.8rem;
+				color: #555;
+				display: block;
+			}
+		}
 	}
 `;
 

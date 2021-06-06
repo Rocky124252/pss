@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Config } from '../config/config';
 import { Page } from '../components/common';
-import { PersonalInfo } from '../components';
+import { PersonalInfo, GiftCard, CurShipment, PaymentMethod } from '../components';
 
 const ConfigWrap = styled.div`
 	width: 100%;
@@ -102,9 +102,15 @@ export const ProfileHeader = () => {
 			{curPage === 1 ? <ConfigContent>
 				<PersonalInfo email={'email@hotmail.com'}/>
 			</ConfigContent> : null}
-			{curPage === 2 ? <ConfigContent>2</ConfigContent> : null}
-			{curPage === 3 ? <ConfigContent>3</ConfigContent> : null}
-			{curPage === 4 ? <ConfigContent>4</ConfigContent> : null}
+			{curPage === 2 ? <ConfigContent>
+				<GiftCard />
+			</ConfigContent> : null}
+			{curPage === 3 ? <ConfigContent>
+				<CurShipment />
+			</ConfigContent> : null}
+			{curPage === 4 ? <ConfigContent>
+				<PaymentMethod />
+			</ConfigContent> : null}
 		</Page>
 	</>);
 }

@@ -8,3 +8,6 @@ export * from './pagetitle';
 export * from './articles';
 export * from './rightsidebar';
 export * from './personal';
+export * from './giftcard';
+export * from './curship';
+export * from './payment';

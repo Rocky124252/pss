@@ -28,12 +28,16 @@ const RowDiv = styled.div`
 `;
 const ColDiv = styled.div`
 	width: 48%;
+	&.full-width {
+		width: 100%;
+	}
 	p {
 		font-size: 1rem;
 		color: #333;
 	}
-	input {
+	input, textarea {
 		color: #333;
+		font-family: 'Arial';
 		padding: 10px 20px;
 		border: 1px solid #CCC;
 		border-radius: 3px;
@@ -50,9 +54,33 @@ const ColDiv = styled.div`
 export const GiftCard = () => {
 
 	return (<>
-		<h2>Gift Card</h2>
-		<p className="c-header">View and edit your personal info below.</p>
+		<h2>Gift Card Info</h2>
+		<p className="c-header">View and edit your gift cards below.</p>
 		<hr /> <br />
+		<RowDiv>
+			<ColDiv>
+				<p><label for="cardtype">Gift Card Type </label></p>
+				<input type="text" id="cardtype" name="cardtype" placeholder="Gift Card Type" />
+			</ColDiv>
+		</RowDiv>
+		<RowDiv>
+			<ColDiv>
+				<p><label for="initialval">Initial Value </label></p>
+				<input type="text" id="initialval" name="initialval" placeholder="Initial Value" />
+			</ColDiv>
+		</RowDiv>
+		<RowDiv>
+			<ColDiv>
+				<p><label for="couponcode">Coupon Code </label></p>
+				<input type="text" id="couponcode" name="couponcode" placeholder="Coupon Code" />
+			</ColDiv>
+		</RowDiv>
+		<RowDiv>
+			<ColDiv className="full-width">
+				<p><label for="message">Message</label></p>
+				<textarea id="message" name="message" placeholder="Message" />
+			</ColDiv>
+		</RowDiv>
 		<RowDiv>
 			<button>Update Info</button>
 		</RowDiv>

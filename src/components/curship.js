@@ -54,7 +54,9 @@ export const CurShipment = () => {
 		<p className="c-header">View and edit your personal info below.</p>
 		<hr /> <br />
 		<RowDiv>
-			<button>Update Info</button>
+			<ColDiv>
+				<button>Update Info</button>
+			</ColDiv>
 		</RowDiv>
 		<br /><br />
 	</>);

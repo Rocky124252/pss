@@ -7,7 +7,6 @@ import { PersonalInfo, GiftCard, CurShipment, PaymentMethod } from '../component
 const ConfigWrap = styled.div`
 	width: 100%;
 	margin-top: 20px;
-	background: linear-gradient(87deg,#11cdef,#1171ef);
 	padding-top: 30px;
 	padding-bottom: 30px;
 	> div {

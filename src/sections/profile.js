@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Config } from '../config/config';
 import { Page } from '../components/common';
+import { useLocation } from "react-router-dom";
 import { PersonalInfo, GiftCard, CurShipment, PaymentMethod } from '../components';
 
 const ConfigWrap = styled.div`
@@ -96,7 +97,14 @@ const ConfigContent = styled.div`
 `;
 
 export const ProfileHeader = () => {
+	const location = useLocation();
 	const [curPage, setCurPage] = useState(0);
+
+	useEffect(() => {
+		if( location.search !== '' )
+			setCurPage(1);
+	  }, [location]);
+	
 	return (<>
 		<ConfigWrap>
 			<Page>

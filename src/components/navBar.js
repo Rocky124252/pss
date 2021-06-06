@@ -228,7 +228,7 @@ export const NavBar = () => {
             <Link to="/">Home</Link>
           </StyledLi>
           <StyledLi>
-            <Link to="/profile">Change Address</Link>
+            <Link to="/profile?cur=1">Change Address</Link>
           </StyledLi>
           <StyledLi>
             <Link to="/request">Request Pickup</Link>

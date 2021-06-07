@@ -243,7 +243,7 @@ export const NavBar = () => {
             <Link to="/updates">Updates</Link>
           </StyledLi>
           <StyledLi className="desktop--hide">
-            <Link to="/account">My Account</Link>
+            <Link to="/profile">My Account</Link>
           </StyledLi>
           <StyledLi className="desktop--hide">
             <Link to="/logout">Log Out</Link>

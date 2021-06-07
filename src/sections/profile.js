@@ -47,10 +47,17 @@ const ConfigItem = styled.div`
 	}
 
 	@media only screen and (max-width: 700px) {
-		width: 20%;
+		width: 23%;
 		border: none;
-		&>div {
+		padding: 5px;
+		display: block;
+		text-align: center;
+		&>div p {
 			display: none;
+		}
+		h3 {
+			margin: 0;
+			font-size: 0.7rem;
 		}
 		img {
 			width: 80%;
@@ -125,15 +132,15 @@ export const ProfileHeader = () => {
 				<ConfigItem onClick={() => setCurPage(3)} className={curPage === 3?'selected':''}>
 					<img src={Config["profile"]["shipping_img"]} alt="" />
 					<div>
-						<h3>Current Shipments</h3>
-						<p>View and edit your current shipments below.</p>
+						<h3>Active Orders</h3>
+						<p>View and edit your active orders below.</p>
 					</div>
 				</ConfigItem>
 				<ConfigItem onClick={() => setCurPage(4)} className={curPage === 4?'selected':''}>
 					<img src={Config["profile"]["payment_img"]} alt="" />
 					<div>
-						<h3>Payment Method</h3>
-						<p>View and edit your payment method below.</p>
+						<h3>Payment Info</h3>
+						<p>View and edit your payment info below.</p>
 					</div>
 				</ConfigItem>
 			</Page>

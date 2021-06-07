@@ -50,8 +50,8 @@ const ColDiv = styled.div`
 export const CurShipment = () => {
 
 	return (<>
-		<h2>Current Shipments</h2>
-		<p className="c-header">View and edit your personal info below.</p>
+		<h2>Active Orders</h2>
+		<p className="c-header">View and edit your active orders below.</p>
 		<hr /> <br />
 		<RowDiv>
 			<ColDiv>

@@ -50,8 +50,8 @@ const ColDiv = styled.div`
 export const PaymentMethod = () => {
 
 	return (<>
-		<h2>Payment Method</h2>
-		<p className="c-header">View and edit your personal info below.</p>
+		<h2>Payment Info</h2>
+		<p className="c-header">View and edit your payment info below.</p>
 		<hr /> <br />
 		<RowDiv>
 			<ColDiv>

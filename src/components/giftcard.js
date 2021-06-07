@@ -73,6 +73,10 @@ const SubTitleH3 = styled.h3`
 	font-size: 1.6rem;
 	margin-left: 20px;
 	margin-top: 1.5rem;
+	@media only screen and (max-width: 700px) {
+		margin-left: 10px;
+		font-size: 1.3rem;
+	}
 `;
 const RedeemDiv = styled.div`
 	margin-left: 20px;
@@ -103,6 +107,10 @@ const RedeemDiv = styled.div`
 			color: #111;
 			transition: all 0.5s ease-in-out;
 		}
+	}
+
+	@media only screen and (max-width: 700px) {
+		margin-left: 10px;
 	}
 `;
 

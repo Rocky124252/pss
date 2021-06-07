@@ -75,7 +75,7 @@ export const PersonalInfo = ({email, children}) => {
 				<input type="text" id="phonenum" name="phonenum" placeholder="Phone" />
 			</ColDiv>
 		</RowDiv>
-		<RowDiv>
+		<RowDiv className="clear">
 			<ColDiv>
 				<p><strong>Address</strong></p>
 				<input type="text" id="street" name="street" placeholder="Street" />
@@ -86,6 +86,7 @@ export const PersonalInfo = ({email, children}) => {
 		</RowDiv>
 		<RowDiv>
 			<ColDiv>
+				<p>&nbsp;</p>
 				<input type="number" id="zipcode" name="zipcode" placeholder="Zip" />
 			</ColDiv>
 			<ColDiv>

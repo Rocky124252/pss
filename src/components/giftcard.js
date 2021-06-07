@@ -68,6 +68,43 @@ const ColRightDiv = styled.div`
 		}
 	}
 `;
+const SubTitleH3 = styled.h3`
+	color: #222;
+	font-size: 1.6rem;
+	margin-left: 20px;
+	margin-top: 1.5rem;
+`;
+const RedeemDiv = styled.div`
+	margin-left: 20px;
+	display: flex;
+	flex-direction: row;
+	margin-top: 5px;
+	input {
+		border: 1px solid #CCC;
+		border-radius: 7px;
+		color: #333;
+		width: 100px;
+		padding: 0.5rem 0.7rem;
+		margin-right: 12px;
+		&:active, &:focus {
+			outline: none;
+		}
+	}
+	button.re-btn {
+		background: #EEE;
+		border: 1px solid #CCC;
+		color: #333;
+		border-radius: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		cursor: pointer;
+		&:hover {
+			background: #DDD;
+			color: #111;
+			transition: all 0.5s ease-in-out;
+		}
+	}
+`;
 
 export const GiftCard = () => {
 	const giftArr = [
@@ -81,6 +118,12 @@ export const GiftCard = () => {
 	return (<>
 		<h2>Gift Card Activity <span className="gift--page">Page 1 of 5 (67 total transaction)</span></h2>
 		<hr />
+		<SubTitleH3>Your Gift Card Balance: $0.60</SubTitleH3>
+		<RedeemDiv>
+			<input type="text" id="redeem" name="redeem" />
+			<button className="re-btn">Redeem a Gift Card</button>
+		</RedeemDiv>
+
 		<RowDiv className="header">
 			<ColLeftDiv><p><strong>Date</strong></p></ColLeftDiv>
 			<ColCenterDiv><p><strong>Balance</strong></p></ColCenterDiv>

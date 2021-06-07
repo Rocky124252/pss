@@ -75,7 +75,7 @@ const SubTitleH3 = styled.h3`
 	margin-top: 1.5rem;
 	@media only screen and (max-width: 700px) {
 		margin-left: 10px;
-		font-size: 1.3rem;
+		font-size: 1.4rem;
 	}
 `;
 const RedeemDiv = styled.div`

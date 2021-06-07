@@ -81,12 +81,12 @@ export const PersonalInfo = ({email, children}) => {
 				<input type="text" id="street" name="street" placeholder="Street" />
 			</ColDiv>
 			<ColDiv>
+			<p>&nbsp;</p>
 				<input type="text" id="city" name="city" placeholder="City" />
 			</ColDiv>
 		</RowDiv>
 		<RowDiv>
 			<ColDiv>
-				<p>&nbsp;</p>
 				<input type="number" id="zipcode" name="zipcode" placeholder="Zip" />
 			</ColDiv>
 			<ColDiv>
